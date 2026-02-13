@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq63vhv532333"]
+
+[ext_resource type="Texture2D" uid="uid://ccgmem4jie6kc" path="res://art/survivalgame-player-green.png" id="1_ivacv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfs80"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vymyi"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8agb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfs80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vymyi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r8agb")
+animation = &"idle"
+frame_progress = 0.604957
