@@ -1,6 +1,30 @@
-[gd_scene load_steps=13 format=3 uid="uid://dq63vhv532333"]
+[gd_scene load_steps=27 format=3 uid="uid://dq63vhv532333"]
 
 [ext_resource type="Texture2D" uid="uid://ccgmem4jie6kc" path="res://art/survivalgame-player-green.png" id="1_ivacv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld8os"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty6wm"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcer5"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5v6b"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(544, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypt2x"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(576, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lucjf"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(608, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_un6i5"]
 atlas = ExtResource("1_ivacv")
@@ -18,6 +42,14 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("1_ivacv")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4lhy"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3gag"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(96, 128, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ue6s6"]
 atlas = ExtResource("1_ivacv")
 region = Rect2(64, 96, 32, 32)
@@ -25,6 +57,14 @@ region = Rect2(64, 96, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fj3tm"]
 atlas = ExtResource("1_ivacv")
 region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vsoi"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdt33"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(96, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uulh1"]
 atlas = ExtResource("1_ivacv")
@@ -42,8 +82,47 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("1_ivacv")
 region = Rect2(96, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5yvq"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0jyy"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm8oj"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awg5f"]
+atlas = ExtResource("1_ivacv")
+region = Rect2(96, 192, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8agb"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld8os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty6wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcer5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5v6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypt2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lucjf")
+}],
+"loop": false,
+"name": &"death",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_un6i5")
@@ -68,6 +147,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_s4lhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3gag")
+}],
+"loop": true,
+"name": &"n-walk",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ue6s6")
 }, {
 "duration": 1.0,
@@ -75,7 +165,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"ne-walk",
-"speed": 5.0
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vsoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdt33")
+}],
+"loop": true,
+"name": &"nw-walk",
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -98,10 +199,34 @@ animations = [{
 "loop": true,
 "name": &"se-walk",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5yvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0jyy")
+}],
+"loop": true,
+"name": &"sw-walk",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm8oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awg5f")
+}],
+"loop": true,
+"name": &"w-walk",
+"speed": 4.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r8agb")
-animation = &"se-walk"
+animation = &"death"
+frame = 5
+frame_progress = 1.0
