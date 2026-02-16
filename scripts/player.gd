@@ -21,4 +21,14 @@ func play_anim(dir):
 	if player_state == "idle":
 		$AnimatedSprite2D.play("idle")
 	if player_state == "walking":
-		$AnimatedSprite2D.stop()
+		if dir.y == -1:
+			$AnimatedSprite2D.play("n-walk")
+		if dir.x == 1:
+			$AnimatedSprite2D.play("e-walk")
+		if dir.y == 1:
+			$AnimatedSprite2D.play("s-walk")
+		if dir.x == -1:
+			$AnimatedSprite2D.play("w-walk")
+		
+		if dir.x > 0.5 and dir.y < -0.5:
+			$AnimatedSprite2D.play("ne-walk")
