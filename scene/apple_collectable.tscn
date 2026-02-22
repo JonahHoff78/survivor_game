@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dioikqgcx8p3k"]
+[gd_scene load_steps=8 format=3 uid="uid://dioikqgcx8p3k"]
 
+[ext_resource type="Script" path="res://scripts/apple_collectable.gd" id="1_wnhrk"]
 [ext_resource type="Texture2D" uid="uid://du725m3r165fm" path="res://art/apple-icon.png" id="1_x23vf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mohf"]
@@ -67,10 +68,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector2(0, 18)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -79,10 +80,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [0.471239]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -91,10 +92,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pj5de"]
@@ -104,8 +105,10 @@ _data = {
 }
 
 [node name="apple_collectable" type="StaticBody2D"]
+script = ExtResource("1_wnhrk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(0, 18)
 rotation = 0.471239
 sprite_frames = SubResource("SpriteFrames_ayjv2")
