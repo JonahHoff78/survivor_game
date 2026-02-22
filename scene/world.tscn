@@ -259,9 +259,6 @@ sources/3 = SubResource("TileSetAtlasSource_kkdiq")
 
 [node name="Player" parent="." instance=ExtResource("1_icbiw")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2x7u2")
 format = 2

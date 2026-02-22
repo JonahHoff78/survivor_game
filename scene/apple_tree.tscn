@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwwotuf8nx07"]
+
+[ext_resource type="Texture2D" uid="uid://m2j4wtg3vo5" path="res://art/survivalgame-appletree.png" id="1_l3lpi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_655ar"]
+atlas = ExtResource("1_l3lpi")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vop2"]
+atlas = ExtResource("1_l3lpi")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh08n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_655ar")
+}],
+"loop": true,
+"name": &"apples",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vop2")
+}],
+"loop": true,
+"name": &"no_apples",
+"speed": 0.0
+}]
+
+[node name="apple_tree" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wh08n")
+animation = &"no_apples"
