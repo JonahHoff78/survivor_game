@@ -558,3 +558,9 @@ frame_progress = 0.390271
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_n6xar")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -519
+limit_top = -398
+limit_right = 559
+limit_bottom = 359
