@@ -1,8 +1,9 @@
-[gd_scene load_steps=70 format=3 uid="uid://dq63vhv532333"]
+[gd_scene load_steps=71 format=3 uid="uid://dq63vhv532333"]
 
 [ext_resource type="Texture2D" uid="uid://ccgmem4jie6kc" path="res://art/survivalgame-player-green.png" id="1_ivacv"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pclyr"]
 [ext_resource type="Resource" uid="uid://ctem4ndfj1g1x" path="res://inventory/playerinv.tres" id="2_dr2au"]
+[ext_resource type="PackedScene" uid="uid://cdfnoqyb40xag" path="res://inventory/inv_ui.tscn" id="4_mjuqx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ld8os"]
 atlas = ExtResource("1_ivacv")
@@ -567,3 +568,5 @@ limit_left = -519
 limit_top = -398
 limit_right = 559
 limit_bottom = 359
+
+[node name="Inv_UI" parent="." instance=ExtResource("4_mjuqx")]
